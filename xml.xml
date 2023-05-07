@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding= "utf-8"?>
+<!DOCTYPE note [
+<!ELEMENT note (to,from,body,date)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+]>
+<note>
+   <to>varun</to>
+   <from>Vivek</from>
+   <body>how are you doing my friend</body>
+   <date> 13-04-2023 </date>
+</note>

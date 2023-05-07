@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>
+              Dialer
+        </title>
+        <style>
+            img
+            {
+                height:532px;
+                width:449px;
+                position:absolute;
+                top:42px;
+                left:410px;
+            }
+        </style>
+        <script>
+            function fun(key)
+            {
+                document.getElementById("result").innerHTML = "you pushed two: "+key;
+            }
+        </script>
+    </head>
+    <body>
+        <p id="result" style="color: red;font-family:'Courier New', Courier, monospace;font-size:medium;font-weight:bold;text-align:center;">Nothing typed yet</p>
+       <img src=".\keypad.png" usemap="#dialer" alt="dialer_keypad">
+       <map name="dialer">
+        <area shape="circle" coords="618,477,57" title="zero"  onclick="fun(0)">
+        <area shape="circle" coords="468,83,57" title="one"  onclick="fun(1)">
+        <area shape="circle" coords="618,85,56" title="two"  onclick="fun(2)">
+        <area shape="circle" coords="770,77,58" title="three"  onclick="fun(3)">
+        <area shape="circle" coords="466,214,57" title="four"  onclick="fun(4)">
+        <area shape="circle" coords="619,210,57" title="five"  onclick="fun(5)">
+        <area shape="circle" coords="770,214,56" title="six"  onclick="fun(6)">
+        <area shape="circle" coords="464,346,57" title="seven"  onclick="fun(7)">
+        <area shape="circle" coords="619,347,58" title="eight"  onclick="fun(8)">
+        <area shape="circle" coords="771,347,57" title="nine"  onclick="fun(9)">
+       </map>
+    </body>
+</html>

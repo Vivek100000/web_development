@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <h1>days remaing to christmas:-</h1>
+    <script>
+      function call()
+      {
+        var b_m = 3;
+        var b_d = 31;
+        var t_d = parseInt(document.getElementById("inp_date").value);
+        var t_m = parseInt(document.getElementById("inp_mon").value);
+        var t_y = parseInt(document.getElementById("inp_year").value);
+        var var2,var1;
+        var1 = String(t_m+"/"+t_d+"/"+t_y);
+        if(t_m>b_m)
+        {
+           
+            var2 = String(b_m+"/"+b_d+"/"+(t_y+1));
+        }
+        else if(t_m==b_m&&t_d>b_d)
+        {
+           
+            var2 = String(b_m+"/"+b_d+"/"+(t_y+1));
+        }
+        else
+        {
+            var2 = String(b_m+"/"+b_d+"/"+t_y);
+        }
+        const date1 = new Date(var1);
+        const date2 = new Date(var2);
+        const diffInMs = Math.abs(date2 - date1);
+        document.getElementById("demo").innerHTML=(diffInMs/(1000 * 60 * 60 * 24));
+      } 
+    </script>
+        date <input type="number" id="inp_date">
+        month: <input type="number" id="inp_mon">
+        year: <input type="number" id="inp_year">
+        <button onclick="call()">ok</button>
+        <p id="demo"></p>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my first form</title>
+    <style>
+        .names
+        {
+            position:relative;
+            left: 0px;
+        }
+        .names2
+        {
+            position:relative;
+            left: 600px;
+        }
+        .phone
+        {
+            position: relative;
+            left: 635px;
+        }
+        .texta
+        {
+            margin-left: 370px;
+        }
+    </style>
+</head>
+<body style="background-color:darkseagreen">
+    <!--comment formats-->
+    <h2 align="center"> MANDATORY FORM </h2>
+    <form>
+    <marquee direction="right">mandatory</marquee>
+    <h3 style="color:red" align="center"> personel details <h3><br>
+        <label class="names">firstname: <input type="text" placeholder="enter your first name" name="firstname"></label>
+        <label class="names2">lastname: <input type="text" placeholder="enter lastname" name="lastname"></label>
+        <br>
+        <br>
+        <label class="names">email: <input type="email" placeholder="enter email" name="email"></label>
+        <label class="phone">phno: <input type="text" placeholder="enter phno" name="phno"></label>
+        
+    <br><br>
+    <label id="country" name="c">country: </label>
+    <select id="country" name="cod">
+        <option selected>India</option>
+        <option>USA</option> 
+        <option>England</option>
+    </select>
+    <br>
+    <br>
+    <b>Programming Languages:-</b><br><br>
+    <label><input type="checkbox"> <b>c++</b></label><br>
+    <label><input type="checkbox"> <b>python</b></label><br>
+    <label><input type="checkbox"> <b>java</b></label><br>
+    <label><input type="checkbox"> <b>c#</b></label><br>
+    <label><input type="checkbox"> <b>dart</b></label><br>
+    <label><input type="checkbox"> <b>html</b></label><br>
+    <h4 align="center">Description:  </h4>
+    <textarea class="texta" rows="15" cols="65"></textarea>
+    <h4>Sex:-</h4>
+    <label> 
+        <input type="radio" name="g" value="male" checked="checked">
+        <span>male</span>
+    </label>
+    <br>
+    <label>
+        <input type="radio"  name="g" value="female">
+        <span>female</span>
+     </label>
+    <br>
+    <button type="submit"> submit </button> 
+    <button type="reset"> reset </button>   
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <b>Today is: </b><p id="day"></p>
+        <b>Current time is: </b><p id="time"></p>
+    </body>
+    <script>
+        var d = new Date();
+        var days = ["sunday","monday","tuesday","wednesday","thrusday","friday","saturday"];
+        var hr = d.getHours();
+        document.getElementById("day").innerHTML=days[d.getDay()];
+        if(hr>12)
+        {
+            hr = hr-12;
+            document.getElementById("time").innerHTML = hr+" PM : "+d.getMinutes()+" : "+d.getSeconds();
+        }
+        else if(hr<=12)
+        {
+            document.getElementById("time").innerHTML = d.getHours()+"AM : "+d.getMinutes()+" : "+d.getSeconds();
+        }
+    </script>
+</html>

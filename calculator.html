@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        var str="";
+        function add(ch)
+        {
+            flag=0;
+            str+=ch;
+            document.getElementById("inp").value=str;
+        }
+        function del()
+        {
+             str = str.slice(0,-1);
+             document.getElementById("inp").value=str;
+        }
+        function calculate()
+        {
+            str = String(eval(str));
+            document.getElementById("inp").value=str;
+        }
+        function clr()
+        {
+            str="";
+            document.getElementById("inp").value="";
+        }
+    </script>
+    <style>
+        input
+        {
+            height:40px;
+            width:245px;
+            background-color: green;
+            font-size: medium;
+            color-scheme: red;
+        }
+         .calc button
+         {
+            height:60px;
+            width:60px;
+            background-color: grey;
+         }
+         .calc .clear_html 
+         {
+            height:70px;
+            width:125px;
+         }
+        .calc .c1
+         {
+            position:absolute;
+            left:13cm;
+            top:2.3cm
+
+         }
+         h1
+         {
+            position:absolute;
+            top:0.2cm;
+            left:12.2cm;
+         }
+    </style>
+</head>
+<body  class="calc">
+
+    <h1>calculator in javascript</h1>
+<div class="c1">
+    <input id="inp" type="text" name="result">
+    <br><br>
+    <button onclick="add('1')">1</button>
+    <button onclick="add('2')">2</button>
+    <button onclick="add('3')">3</button>
+    <button onclick="add('*')">*</button>
+    <br><br>
+    <button onclick="add('4')">4</button>
+    <button onclick="add('5')">5</button>
+    <button onclick="add('6')">6</button>
+    <button onclick="add('/')">/</button>
+    <br><br>
+    <button onclick="add('7')">7</button>
+    <button onclick="add('8')">8</button>
+    <button onclick="add('9')">9</button>
+    <button onclick="add('+')">+</button>
+    <br><br>
+    <button onclick="add('-')">-</button>
+    <button onclick="add('0')">0</button>
+    <button onclick="add('.')">.</button>
+    <button onclick="del()">CE</button>
+    <br><br>
+    <button class="clear_html" onclick="calculate()">=</button>
+    <button class="clear_html" onclick="clr()">AC</button>
+     
+</div>
+    </body>
+</html>
